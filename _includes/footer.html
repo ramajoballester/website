@@ -1,57 +1,55 @@
-<footer id="footer">
-    <!--Footer Button-->
-    <div class="container has-text-centered has-background-grey-darker" id="backtotop">
-        <a class="has-text-white" onclick="window.scroll(0,0)">BACK TO TOP</a>
-    </div>
-    <!--Footer Main Section-->
+<footer id="footer" class="has-text-centered">
     <div class="has-background-grey-darker">
-        <div class="container columns">
-            <!--Name Section-->
-            <div class="column has-text-left-desktop has-text-centered-mobile">
-                <a href="{{site.url}}{{site.baseurl}}/#about">
-                    <div class="columns">
-                        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
-                            <figure class="image is-64x64">
-                                <img class="is-rounded" src="{{site.author-image}}">
-                            </figure>
-                        </div>
-                        <div class="column is-marginless">
-                            <h5 class="has-text-grey-lighter">{{site.author-name}}</h5>
-                            <div class="content has-text-grey">
-                                <p>{{site.author-about | truncate: 75 }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!--Link Section-->
-            <div class="column has-text-white">
-                <h3>More Links</h3>
-                {% for sitepage in site.html_pages offset: 4 %}
-                {% unless sitepage.url == '/'  limit: 2 %}
-                <li>
-                    <a href="{{sitepage.url | absolute_url}}">{{sitepage.title}}</a>
-                </li>
+        <div class="container">
+            <!-- <hr> -->
+            <div class="column is-full is-size-3"></div>
+                {% unless site.facebook_username == %}
+                <a href="http://www.facebook.com/{{site.facebook_username}}" target="_blank" class="has-text-black"><i class="fab fa-facebook"></i></a>
                 {% endunless %}
-                {% endfor %}
-                <li>
-                    <a target="_blank" href="{{site.url}}{{site.baseurl}}/feed.xml">Subscribe via RSS</a>
-                </li>
+                {% unless site.twitter_username == %}
+                <a href="https://twitter.com/intent/user?screen_name={{site.twitter_username}}" target="_blank" class="has-text-black"><i class="fab fa-twitter icon-margin"></i></a>
+                {% endunless %}
+                {% unless site.instagram_username ==  %}
+                <a href="http://www.instagram.com/{{site.instagram_username}}" target="_blank" class="has-text-black"><i class="fab fa-instagram"></i></a>
+                {% endunless %}
+                {% unless site.linkedin_username ==  %}
+                <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" target="_blank" class="has-text-black"><i class="fab fa-linkedin icon-margin"></i></a>
+                {% endunless %}
+                {% unless site.github_username ==  %}
+                <a href="http://www.github.com/{{site.github_username}}" target="_blank" class="has-text-black"><i class="fab fa-github slow-spin icon-margin"></i></a>
+                {% endunless %}
+                {% unless site.youtube_channel_id ==  %}
+                <a href="http://www.youtube.com/channel/{{site.youtube_channel_id}}" target="_blank" class="has-text-black"><i class="fab fa-youtube"></i></a>
+                {% endunless %}
+                {% unless site.reddit_username ==  %}
+                <a href="http://www.reddit.com/u/{{site.reddit_username}}" target="_blank" class="has-text-black"><i class="fab fa-reddit"></i></a>
+                {% endunless %}
+                {% unless site.behance_username ==  %}
+                <a href="http://www.behance.com/{{site.behance_username}}" target="_blank" class="has-text-black"><i class="fab fa-behance"></i></a>
+                {% endunless %}
+                {% unless site.dribbble_username ==  %}
+                <a href="http://www.dribbble.com/{{site.dribbble_username}}" target="_blank" class="has-text-black"><i class="fab fa-dribbble"></i></a>
+                {% endunless %}
+                {% unless site.spotify_username ==  %}
+                <a href="http://open.spotify.com/user/{{site.spotify_username}}" target="_blank" class="has-text-black"><i class="fab fa-spotify"></i></a>
+                {% endunless %}
+                {% unless site.google_scholar_username ==  %}
+                <a href="https://scholar.google.es/citations?hl=en&user={{site.google_scholar_username}}" target="_blank" class="has-text-black"><i class="ai ai-google-scholar icon"></i></a>
+                {% endunless %}
+                {% unless site.orcid_username ==  %}
+                <a href="https://orcid.org/{{site.orcid_username}}" target="_blank" class="has-text-black"><i class="fab fa-orcid icon-margin"></i></a>
+                {% endunless %}
+                {% unless site.publons_username ==  %}
+                <a href="https://publons.com/researcher/{{site.publons_username}}" target="_blank" class="has-text-black"><i class="ai ai-publons icon"></i></a>
+                {% endunless %}
+                {% unless site.scopus_username ==  %}
+                <a href="https://www.scopus.com/authid/detail.uri?authorId={{site.scopus_username}}" target="_blank" class="has-text-black"><i class="ai ai-scopus icon"></i></a>
+                {% endunless %}
             </div>
-
-            <!--Blog-post Section-->
-            <div class="column has-text-white">
-                <h3>Recent Posts</h3>
-                {% for post in site.posts offset: 0 limit:3 %}
-                <li>
-                    <a href="{{post.url | absolute_url}}">{{post.title}}</a>
-                </li>
-                {% endfor %}
-            </div>
+            <br>
+            
         </div>
+
     </div>
-    <div class="has-background-black has-text-centered has-text-white" id="credits">
-        <i class="far fa-copyright"></i> {{ "now" | date: "%Y" }} | <a href="https://github.com/thedevslot/WhatATheme" target="_blank" rel="noopener noreferrer">WhatATheme</a> - A Theme made with <i class="fas fa-heart has-text-danger"></i> by <a href="https://www.twitter.com/thedevslot" target="_blank" rel="noopener noreferrer">TheDevsLot</a> Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
-    </div>
+        
 </footer>

@@ -74,7 +74,7 @@ a.navbar-item.is-active {
         margin: auto;
 
         img {
-            border: 0.25rem dotted black;
+            border: 0.05rem solid black;
         }
     }
 
@@ -84,7 +84,53 @@ a.navbar-item.is-active {
     }
 }
 
-#contact {
+.about-title {
+    margin: auto 0.5rem ;
+    color: #000000;
+    font-size: 1.2rem;
+    .hover{
+        &:hover {
+            color: #597993;
+        }
+    }
+}
+
+.about-subtitle{
+    margin: auto 0.5rem ;
+    color: #2b2b2b;
+    font-size: 1.2rem;
+}
+.about-text{
+    margin: auto 0.5rem ;
+    color: #000000;
+    font-size: 1rem;
+}
+.about-margin{
+    margin-top: 50px ;
+}
+.contact-year{
+    margin: auto 0.5rem ;
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+.icon {
+    transition: all 0.25s ease;
+    margin: auto 0.2rem ;
+    margin-bottom: 0rem ;
+    font-size: 2.2rem;
+
+    &:hover {
+        transform: scale(1.10);
+        filter: opacity(0.75);
+    }
+}
+
+.icon-margin {
+    padding-bottom: 0.12rem;
+}
+
+#work {
     #contact-button {
         margin: 0.5rem auto;
         display: flex;
@@ -197,8 +243,42 @@ a.navbar-item.is-active {
     }
 }
 
+.slow-spin {
+    -webkit-animation: fa-spin 6s infinite linear;
+    animation: fa-spin 6s infinite linear;
+}
 
 #footer {
+    .icon{
+        margin: auto 0.5rem ;
+        @media (min-width: 768px) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+        transition: all 0.25s ease;
+        font-size: 2.5rem;
+        color: rgb(196, 196, 196);
+        &:hover {
+            transform: scale(1.10);
+            filter: opacity(0.75);
+        }
+    }
+    .icon-margin {
+        margin: auto 0.5rem ;
+        @media (min-width: 768px) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+        transition: all 0.25s ease;
+        font-size: 2.2rem;
+        color: rgb(196, 196, 196);
+        padding-bottom: 0.12rem;
+        &:hover {
+            transform: scale(1.10);
+            filter: opacity(0.75);
+        }
+    }
+
     #backtotop {
         transition: all 0.25s ease;
         width: 10rem;
@@ -291,8 +371,15 @@ a.navbar-item.is-active {
 
 #post {
     @media (min-width: 768px) {
-        margin: auto 2.5vmax;
+        margin: auto 7.5vmax;
     }
+    @media (min-width: 1000px) {
+        margin: auto 15vmax;
+    }
+    // @media (min-width: 1000px) {
+    //     margin: auto 25vmax;
+    //     // margin: auto 10vmax;
+    // }
     a {
         text-decoration: underline;
     }
@@ -316,6 +403,7 @@ a.navbar-item.is-active {
     .tag {
         margin: 0.15rem auto;
     }
+
     .content {
         ol, ul, blockquote {
             display: inline-block;
@@ -332,6 +420,11 @@ a.navbar-item.is-active {
         }
         ul, ol {
             display: inline-block;
+        }
+    }
+    .content-text {
+        @media (min-width: 768px) {
+            margin: auto 15vmax;
         }
     }
 
