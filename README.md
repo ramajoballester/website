@@ -1,3 +1,9 @@
+# Development
+
+```bundle exec jekyll serve``` to run the site locally
+
+```jekyll build``` to build the site
+
 # WhatATheme
 **WhatATheme** is a customizable Jekyll Portfolio theme which supports blogging. You can use this theme in order to create an elegant, fully responsive portfolio.
 

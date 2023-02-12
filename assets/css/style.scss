@@ -84,6 +84,15 @@ a.navbar-item.is-active {
     }
 }
 
+.error-pages{
+    font-size: 1rem;
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+
+
+}
+
 .about-title {
     margin: auto 0.5rem ;
     color: #000000;
