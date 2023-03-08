@@ -1,11 +1,9 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
-/*
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+:root {
+    --enphasis-color:#a84141;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -31,6 +29,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	/* max-width: 1200px;
+	margin: 0 auto; */
 }
 
 ol, ul {
@@ -116,7 +116,7 @@ input, select, textarea {
 /* Type */
 
 	html {
-		font-size: 18pt;
+		font-size: 14pt;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -158,7 +158,10 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		/* font-family: "Source Sans Pro", Montserrat, sans-serif; */
 		font-size: 1rem;
+		/* Increase inter letter space */
+		/* letter-spacing: 0.05em; */
 		font-weight: 300;
 		line-height: 1.65;
 	}
@@ -194,7 +197,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.375;
-		letter-spacing: -0.05em;
+		/* letter-spacing: -0.05em; */
 		margin: 0 0 1rem 0;
 	}
 
@@ -324,7 +327,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #47D3E5;
+			color: var(--enphasis-color);
 		}
 
 	strong, b {
@@ -2196,8 +2199,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px #47D3E5;
-			color: #47D3E5 !important;
+			box-shadow: inset 0 0 0 1px var(--enphasis-color);
+			color: var(--enphasis-color) !important;
 		}
 
 		input[type="submit"]:active,
@@ -2206,8 +2209,8 @@ input, select, textarea {
 		button:active,
 		.button:active {
 			background-color: rgba(71, 211, 229, 0.2);
-			box-shadow: inset 0 0 0 1px #47D3E5;
-			color: #47D3E5 !important;
+			box-shadow: inset 0 0 0 1px var(--enphasis-color);
+			color: var(--enphasis-color) !important;
 		}
 
 		input[type="submit"].primary,
@@ -2225,7 +2228,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #47D3E5;
+				background-color: var(--enphasis-color);
 			}
 
 			input[type="submit"].primary:active,
@@ -2496,8 +2499,8 @@ input, select, textarea {
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #47D3E5;
-			box-shadow: 0 0 0 1px #47D3E5;
+			border-color: var(--enphasis-color);
+			box-shadow: 0 0 0 1px var(--enphasis-color);
 		}
 
 	select {
@@ -2528,8 +2531,8 @@ input, select, textarea {
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
-		border-color: #47D3E5;
-		box-shadow: 0 0 0 1px #47D3E5;
+		border-color: var(--enphasis-color);
+		box-shadow: 0 0 0 1px var(--enphasis-color);
 	}
 
 	::-webkit-input-placeholder {
@@ -2586,6 +2589,10 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.x2 {
+			font-size: 2em;
+		}
+
 		.icon.style2:before {
 			border-radius: 2.75em;
 			display: inline-block;
@@ -2615,14 +2622,14 @@ input, select, textarea {
 	}
 
 	a.icon.style2:hover:before {
-		box-shadow: inset 0 0 0 1px #47D3E5;
-		color: #47D3E5;
+		box-shadow: inset 0 0 0 1px var(--enphasis-color);
+		color: var(--enphasis-color);
 	}
 
 	a.icon.style2:active:before {
 		background-color: rgba(71, 211, 229, 0.1);
-		box-shadow: inset 0 0 0 1px #47D3E5;
-		color: #47D3E5;
+		box-shadow: inset 0 0 0 1px var(--enphasis-color);
+		color: var(--enphasis-color);
 	}
 
 /* Image */
@@ -2883,7 +2890,7 @@ input, select, textarea {
 
 		ul.icons li {
 			display: inline-block;
-			padding: 0 0.75rem 0 0;
+			padding: 0 2rem 0 0;
 		}
 
 			ul.icons li:last-child {
@@ -4255,7 +4262,7 @@ input, select, textarea {
 /* Banner (style5) */
 
 	.banner.style5 {
-		padding: 7rem 7rem 5rem 7rem ;
+		padding: 10rem 7rem 5rem 7rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -4321,7 +4328,7 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			.banner.style5 {
-				padding: 5rem 5rem 3rem 5rem ;
+				padding: 7rem 5rem 3rem 5rem ;
 			}
 
 		}
@@ -4329,7 +4336,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.banner.style5 {
-				padding: 4rem 4rem 2rem 4rem ;
+				padding: 5.5rem 4rem 2rem 4rem ;
 			}
 
 		}
@@ -4337,7 +4344,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			.banner.style5 {
-				padding: 3.75rem 3rem 1.75rem 3rem ;
+				padding: 4.5rem 3rem 1.75rem 3rem ;
 			}
 
 		}
@@ -4345,7 +4352,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.banner.style5 {
-				padding: 2.5rem 2rem 0.5rem 2rem ;
+				padding: 5rem 2rem 0.5rem 2rem ;
 			}
 
 		}
@@ -6382,7 +6389,7 @@ input, select, textarea {
 		}
 
 			.gallery.style1 a:hover {
-				color: #47D3E5;
+				color: var(--enphasis-color);
 			}
 
 		.gallery.style1 strong, .gallery.style1 b {
@@ -6421,8 +6428,8 @@ input, select, textarea {
 			.gallery.style1 input[type="button"]:hover,
 			.gallery.style1 button:hover,
 			.gallery.style1 .button:hover {
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5 !important;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color) !important;
 			}
 
 			.gallery.style1 input[type="submit"]:active,
@@ -6431,8 +6438,8 @@ input, select, textarea {
 			.gallery.style1 button:active,
 			.gallery.style1 .button:active {
 				background-color: rgba(71, 211, 229, 0.2);
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5 !important;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color) !important;
 			}
 
 			.gallery.style1 input[type="submit"].primary,
@@ -6450,7 +6457,7 @@ input, select, textarea {
 				.gallery.style1 input[type="button"].primary:hover,
 				.gallery.style1 button.primary:hover,
 				.gallery.style1 .button.primary:hover {
-					background-color: #47D3E5;
+					background-color: var(--enphasis-color);
 				}
 
 				.gallery.style1 input[type="submit"].primary:active,
@@ -6706,7 +6713,7 @@ input, select, textarea {
 		}
 
 			.gallery.style2 a:hover {
-				color: #47D3E5;
+				color: var(--enphasis-color);
 			}
 
 		.gallery.style2 strong, .gallery.style2 b {
@@ -6745,8 +6752,8 @@ input, select, textarea {
 			.gallery.style2 input[type="button"]:hover,
 			.gallery.style2 button:hover,
 			.gallery.style2 .button:hover {
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5 !important;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color) !important;
 			}
 
 			.gallery.style2 input[type="submit"]:active,
@@ -6755,8 +6762,8 @@ input, select, textarea {
 			.gallery.style2 button:active,
 			.gallery.style2 .button:active {
 				background-color: rgba(71, 211, 229, 0.2);
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5 !important;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color) !important;
 			}
 
 			.gallery.style2 input[type="submit"].primary,
@@ -6774,7 +6781,7 @@ input, select, textarea {
 				.gallery.style2 input[type="button"].primary:hover,
 				.gallery.style2 button.primary:hover,
 				.gallery.style2 .button.primary:hover {
-					background-color: #47D3E5;
+					background-color: var(--enphasis-color);
 				}
 
 				.gallery.style2 input[type="submit"].primary:active,
@@ -8269,7 +8276,7 @@ input, select, textarea {
 			}
 
 				#wrapper > .invert a:hover {
-					color: #47D3E5;
+					color: var(--enphasis-color);
 				}
 
 			#wrapper > .invert strong, #wrapper > .invert b {
@@ -8312,8 +8319,8 @@ input, select, textarea {
 				#wrapper > .invert input[type="button"]:hover,
 				#wrapper > .invert button:hover,
 				#wrapper > .invert .button:hover {
-					box-shadow: inset 0 0 0 1px #47D3E5;
-					color: #47D3E5 !important;
+					box-shadow: inset 0 0 0 1px var(--enphasis-color);
+					color: var(--enphasis-color) !important;
 				}
 
 				#wrapper > .invert input[type="submit"]:active,
@@ -8322,8 +8329,8 @@ input, select, textarea {
 				#wrapper > .invert button:active,
 				#wrapper > .invert .button:active {
 					background-color: rgba(71, 211, 229, 0.2);
-					box-shadow: inset 0 0 0 1px #47D3E5;
-					color: #47D3E5 !important;
+					box-shadow: inset 0 0 0 1px var(--enphasis-color);
+					color: var(--enphasis-color) !important;
 				}
 
 				#wrapper > .invert input[type="submit"].primary,
@@ -8341,7 +8348,7 @@ input, select, textarea {
 					#wrapper > .invert input[type="button"].primary:hover,
 					#wrapper > .invert button.primary:hover,
 					#wrapper > .invert .button.primary:hover {
-						background-color: #47D3E5;
+						background-color: var(--enphasis-color);
 					}
 
 					#wrapper > .invert input[type="submit"].primary:active,
@@ -8375,8 +8382,8 @@ input, select, textarea {
 				#wrapper > .invert input[type="url"]:focus,
 				#wrapper > .invert select:focus,
 				#wrapper > .invert textarea:focus {
-					border-color: #47D3E5;
-					box-shadow: 0 0 0 1px #47D3E5;
+					border-color: var(--enphasis-color);
+					box-shadow: 0 0 0 1px var(--enphasis-color);
 				}
 
 			#wrapper > .invert select {
@@ -8407,8 +8414,8 @@ input, select, textarea {
 
 			#wrapper > .invert input[type="checkbox"]:focus + label:before,
 			#wrapper > .invert input[type="radio"]:focus + label:before {
-				border-color: #47D3E5;
-				box-shadow: 0 0 0 1px #47D3E5;
+				border-color: var(--enphasis-color);
+				box-shadow: 0 0 0 1px var(--enphasis-color);
 			}
 
 			#wrapper > .invert ::-webkit-input-placeholder {
@@ -8432,14 +8439,14 @@ input, select, textarea {
 			}
 
 			#wrapper > .invert a.icon.style2:hover:before {
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color);
 			}
 
 			#wrapper > .invert a.icon.style2:active:before {
 				background-color: rgba(71, 211, 229, 0.1);
-				box-shadow: inset 0 0 0 1px #47D3E5;
-				color: #47D3E5;
+				box-shadow: inset 0 0 0 1px var(--enphasis-color);
+				color: var(--enphasis-color);
 			}
 
 			#wrapper > .invert ul.alt li {
@@ -8601,3 +8608,175 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+.black-text {
+	color: #000000;
+}
+
+.white-background {
+	background-color: #ffffff;
+}
+
+.white-text {
+	color: #ffffff;
+}
+
+.grey-background {
+	background-color: #e4e4e4;
+}
+
+.gradient-background {
+	background-image: linear-gradient(135deg, #30363d 0%, #db8992 100%);
+}
+
+.small-vertical-margin {
+	margin-top: 0.5margin-top;
+	margin-bottom: 0.5margin-bottom;
+}
+
+.small-vertical-padding {
+	padding-top: 5padding-top;
+	padding-bottom: 0.5padding-bottom;
+}
+
+.no-vertical-margin {
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+
+.no-vertical-padding {
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+
+.no-padding-top{
+	padding-top: 0%;
+}
+
+.no-padding-bottom{
+	padding-bottom: 0%;
+}
+
+.justify{
+	text-align: justify;
+}
+
+.big-vertical-padding {
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+
+
+
+/* Add a transparent background color to the top navigation */
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding-left: calc(-20.5rem + 50vw);
+}
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+	float: left;
+	display: block;
+	color: #000000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	/* Font size reshaping with viewport width */
+	font-size: 1.2rem;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+	background-color: transparent;
+	color: var(--enphasis-color);
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+	background-color: #4e4e4e;
+	color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+	display: none;
+  }
+
+  /* Add padding to the body to avoid overlapping with the navigation */
+  body {
+	padding-bottom: 80px;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 500px) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+	  float: right;
+	  display: block;
+	}
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 500px) {
+	.topnav.responsive {position: relative;}
+	.topnav.responsive a.icon {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}
+	.topnav.responsive a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	  background-color: #c0c0c0;
+	}
+	.topnav.responsive a.active {
+		background-color: #4e4e4e;
+	}
+  }
+
+@media screen and (max-width: 650px) {
+	.topnav {
+		padding-left: 1.75rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.topnav {
+		padding-left: 0rem;
+	}
+}
+
+/* Scrollbar */
+/* Webkit */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    /* background: #888; */
+	background: var(--enphasis-color);
+}
+/* Firefox */
+::-moz-scrollbar {
+    width: 10px;
+}
+::-moz-scrollbar-track {
+    background: #ffffff;
+}
+::-moz-scrollbar-thumb {
+    /* background: #888; */
+	background: var(--enphasis-color);
+
+}

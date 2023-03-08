@@ -339,3 +339,53 @@
 						});
 
 })(jQuery);
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+	  x.className += " responsive";
+	} else {
+	  x.className = "topnav";
+	}
+  }
+
+
+const quote_options = [
+	"\"Any sufficiently advanced technology is indistinguishable from magic\"",
+	"\"If you can't explain it to a six year old, you don't understand it yourself\"",
+	"\"An optimist will tell you the glass is half-full; the pessimist, half-empty; and the engineer will tell you the glass is twice the size it needs to be\"",
+	"\"The best way to predict the future is to invent it\"",
+	"\"In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual\"",
+	"\"Software is a great combination of artistry and engineering\"",
+	"\"To understand recursion, one must first understand recursion\"",
+	"\"I'm not a great programmer; I'm just a good programmer with great habits\"",
+	"\"If at first you don't succeed, call it version 1.0\"",
+	"\"Debugging is like being the detective in a crime movie where you are also the murderer\"",
+	"\"Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning\""
+];
+const author_options = [
+	"― Arthur C. Clarke",
+	"― Albert Einstein",
+	"― Anonymous",
+	"― Alan Kay",
+	"― Galileo Galilei",
+	"― Bill Gates",
+	"― Anonymous",
+	"― Kent Beck",
+	"― Anonymous",
+	"― Filipe Fortes",
+	"― Rick Cook"
+];
+
+window.onload = function() {
+	const random_index = Math.floor(Math.random() * quote_options.length);
+	const random_quote = quote_options[random_index];
+	const random_author = author_options[random_index];
+	const quote_placeholder = document.getElementById("quote-placeholder");
+	const author_placeholder = document.getElementById("author-placeholder");
+	quote_placeholder.textContent = random_quote;
+	author_placeholder.textContent = random_author;
+}
+  
