@@ -1,0 +1,12 @@
+<footer class="wrapper style1 align-center">
+	<div class="inner">
+		<ul class="icons">
+			<li><a href="#" class="icon brands style1 x2 fa-linkedin-in"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands style1 x2 fa-github"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands style1 x2 fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands style1 x2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			<li><a href="#" class="icon style1 x2 fa-envelope"><span class="label">Email</span></a></li>
+		</ul>
+		<p>&copy; Álvaro Ramajo, 2023</p>
+	</div>
+</footer>

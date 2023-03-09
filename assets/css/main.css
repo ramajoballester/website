@@ -8667,6 +8667,14 @@ input, select, textarea {
 	padding-bottom: 2rem;
 }
 
+.big-below-padding {
+	padding-bottom: 3rem;
+}
+
+.hover-text:hover {
+	color: var(--enphasis-color);
+}
+
 
 
 
