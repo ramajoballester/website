@@ -1,0 +1,26 @@
+# # BEGIN WordPress
+# <IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteBase /
+# RewriteRule ^index.php$ - [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /index.php [L]
+# </IfModule>
+# # END WordPres
+
+RewriteEngine On
+ErrorDocument 404 /404.html
+# Redirect everything to construction.html
+# RewriteRule .* /construction.html [L]
+
+# Redirect news/ and project/
+RewriteRule news/* /construction.html [L]
+# RewriteRule project/* /construction.html [L]
+
+# Rewrite everything (*) to *.html
+RewriteRule ^([a-zA-Z0-9-_@#$%^&*()]+)/?$ $1.html [NC]
+
+# Rewrite news/* to news/*.html
+RewriteRule ^news/([a-zA-Z0-9-_@#$%^&*()]+)/?$ news/$1.html [NC,L]
+
